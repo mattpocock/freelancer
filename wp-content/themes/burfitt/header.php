@@ -15,13 +15,19 @@
 <body>
 
 <div class="nav-bar hidden-xs">
-    <?php wp_nav_menu() ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+</div>
+
+<div class="nav-bar show-xs">
+    <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
 </div>
     
 <div class="container">
 
 <div class="col-12 title-area">
-    <img class="title-area__img" src="https://i0.wp.com/www.frauleinlouise.com/wp-content/uploads/2015/11/cropped-IMG_2940-2-1.jpg"/>
+    <a href="/">
+        <img class="title-area__img" src="https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAAy_AAAAJDgzM2JjNmQ0LTExZjMtNDdmOS1hOTgyLWMzZmVlNWYyNTVkNQ.jpg"/>
+    </a>
     <h1>Louise Burfitt</h1>
     <h2>Translator, Editor, Writer, Photographer</h2>
 </div>

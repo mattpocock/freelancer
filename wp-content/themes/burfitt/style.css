@@ -41,6 +41,9 @@ hr {
   background-color: #999; }
 
 /* Layouts */
+.show-xs {
+  display: none; }
+
 .container {
   width: 94%;
   margin: auto;
@@ -76,14 +79,30 @@ hr {
   @media screen and (max-width: 768px) {
     .container .hidden-xs {
       display: none; }
+    .container .show-xs {
+      display: block; }
     .container .col-xs-12 {
+      width: 100%; } }
+  @media screen and (max-width: 992px) {
+    .container .hidden-sm {
+      display: none; }
+    .container .col-sm-12 {
       width: 100%; } }
 
 @media screen and (max-width: 768px) {
   .hidden-xs {
     display: none; }
 
+  .show-xs {
+    display: block; }
+
   .col-xs-12 {
+    width: 100%; } }
+@media screen and (max-width: 992px) {
+  .hidden-sm {
+    display: none; }
+
+  .col-sm-12 {
     width: 100%; } }
 .page-heading {
   margin: 40px 0;
@@ -105,8 +124,6 @@ hr {
   padding: 80px 20px;
   box-sizing: border-box;
   text-align: center;
-  transition: opacity 0.5s;
-  cursor: pointer;
   margin-top: 50px; }
   .title-area h1 {
     margin: 0;
@@ -120,10 +137,11 @@ hr {
     height: 130px;
     width: 130px;
     border-radius: 120px;
-    margin-bottom: 10px; }
-
-.title-area:hover {
-  opacity: 0.6; }
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+    cursor: pointer; }
+  .title-area img:hover {
+    opacity: 0.6; }
 
 /* Nav Bar */
 .nav-bar {
@@ -148,14 +166,15 @@ hr {
 /* Skills Area */
 .skills-area__container .skills-area__skill {
   box-sizing: border-box;
-  padding: 20px; }
+  padding: 20px;
+  vertical-align: top; }
   .skills-area__container .skills-area__skill img {
     width: 100%;
     transition: opacity 0.3s;
     cursor: pointer; }
   .skills-area__container .skills-area__skill img:hover {
     opacity: 0.5; }
-  .skills-area__container .skills-area__skill a {
+  .skills-area__container .skills-area__skill .skills-area__link {
     background-color: #666;
     color: white;
     text-decoration: none;
@@ -164,9 +183,9 @@ hr {
     display: inline-block;
     font-size: 12px;
     line-height: 20px;
-    transition: transform 0.1s; }
-  .skills-area__container .skills-area__skill a:hover {
-    transform: scale(1.1, 1.1); }
+    transition: opacity 0.2s; }
+  .skills-area__container .skills-area__skill .skills-area__link:hover {
+    opacity: 0.6; }
 .skills-area__container h1 {
   text-align: center;
   margin: 0;

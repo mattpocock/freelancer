@@ -65,6 +65,10 @@ hr {
 
 /* Layouts */
 
+.show-xs {
+    display: none;
+}
+
 .container {
 
     width: 94%;
@@ -124,7 +128,21 @@ hr {
             display: none;
         }
     
+        .show-xs {
+            display: block;
+        }
+    
         .col-xs-12 {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $md) {
+        .hidden-sm {
+            display: none;
+        }
+    
+        .col-sm-12 {
             width: 100%;
         }
     }
@@ -136,7 +154,21 @@ hr {
         display: none;
     }
 
+    .show-xs {
+        display: block;
+    }
+
     .col-xs-12 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .hidden-sm {
+        display: none;
+    }
+
+    .col-sm-12 {
         width: 100%;
     }
 }
@@ -168,8 +200,6 @@ hr {
     padding: 80px 20px;
     box-sizing: border-box;
     text-align: center;
-    transition: opacity 0.5s;
-    cursor: pointer;
     margin-top: 50px;
 
     h1 {
@@ -188,11 +218,13 @@ hr {
         width: 130px;
         border-radius: 120px;
         margin-bottom: 10px;
+        transition: opacity 0.5s;
+        cursor: pointer;
     }
-}
 
-.title-area:hover {
-    opacity: 0.6;
+    img:hover {
+        opacity: 0.6;
+    }
 }
 
 /* Nav Bar */
@@ -228,6 +260,7 @@ hr {
     .skills-area__skill {
         box-sizing: border-box;
         padding: 20px;
+        vertical-align: top;
 
         img {
             width: 100%;
@@ -239,7 +272,8 @@ hr {
             opacity: 0.5;
         }
 
-        a {
+
+        .skills-area__link {
             background-color: #666;
             color: white;
             text-decoration: none;
@@ -248,11 +282,11 @@ hr {
             display: inline-block;
             font-size: 12px;
             line-height: 20px;
-            transition: transform 0.1s;
+            transition: opacity 0.2s;
         }
 
-        a:hover {
-            transform: scale(1.1, 1.1);
+        .skills-area__link:hover {
+            opacity: 0.6;
         }
     }
 
