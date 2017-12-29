@@ -1,0 +1,153 @@
+/*
+Theme Name: Start WordPress
+Author: Tania Rascia
+Description: Bootstrap Blog template converted to WordPress
+Version: 0.0.1
+Tags: bootstrap
+*/
+
+/* Variables */
+
+$para-color: #555;
+$heading-color: #333;
+
+/* Breakpoints */
+
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+/* Presets */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i1.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5801.jpg?resize=1200%2C800");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+    font-family: 'Comfortaa', cursive;
+}
+
+p, a {
+    color: $para-color;
+    font-family: 'Hind', sans-serif;
+}
+
+a:visited {
+    color: $para-color;
+}
+
+/* Layouts */
+
+.container {
+
+    width: 94%;
+    margin: auto;
+
+    @media (min-width: $sm) {
+        width: 550px;
+    }
+    @media (min-width: $md) {
+        width: 970px;
+      }
+    @media (min-width: $lg) {
+        width: 1170px;
+      }
+
+    position: relative;
+
+    div {
+        display: inline-block;
+        background-color: white;
+    }
+
+    .col-4 {
+        width: 33%;
+    }
+
+    .col-5 {
+        width: 41%
+    }
+
+    .col-6 {
+        width: 49%;
+    }
+
+    .col-7 {
+        width: 58%;
+    }
+
+    .col-8 {
+        width: 66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .align-center {
+        margin: 0 auto;
+        display: block;
+    }
+
+    @media screen and (max-width: $sm) {
+        .hidden-xs {
+            display: none;
+        }
+
+        .col-xs-12 {
+            width: 100%;
+        }
+    }
+}
+
+/* Title Area */
+
+.title-area {
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    h2 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Nav Bar */
+
+.nav-bar {
+    text-align: center;
+    a {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+/* Puzzle Area */
+
+.puzzle-area__container {
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.puzzle-area {
+
+}
