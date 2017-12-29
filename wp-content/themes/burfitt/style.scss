@@ -1,6 +1,6 @@
 /*
 Theme Name: Start WordPress
-Author: Tania Rascia
+Author: Matt Pocock
 Description: Bootstrap Blog template converted to WordPress
 Version: 0.0.1
 Tags: bootstrap
@@ -10,6 +10,9 @@ Tags: bootstrap
 
 $para-color: #555;
 $heading-color: #333;
+
+$light-background: rgba(90,90,90,.03);
+$dark-background: rgba(0,0,0,0.7);
 
 /* Breakpoints */
 
@@ -22,7 +25,6 @@ $lg: 1200px;
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://i1.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5801.jpg?resize=1200%2C800");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,13 +32,35 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', cursive;
 }
 
-p, a {
+p, a, textarea, input {
     color: $para-color;
     font-family: 'Hind', sans-serif;
 }
 
 a:visited {
     color: $para-color;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+button {
+    border: none;
+}
+
+button:focus, input[type="submit"]:focus {
+    outline: 0;
+}
+
+hr {
+    margin: 40px 0px;
+    background-color: #999;
 }
 
 /* Layouts */
@@ -60,7 +84,6 @@ a:visited {
 
     div {
         display: inline-block;
-        background-color: white;
     }
 
     .col-4 {
@@ -83,6 +106,10 @@ a:visited {
         width: 66%;
     }
 
+    .col-10 {
+        width: 83%;
+    }
+
     .col-12 {
         width: 100%;
     }
@@ -96,19 +123,54 @@ a:visited {
         .hidden-xs {
             display: none;
         }
-
+    
         .col-xs-12 {
             width: 100%;
         }
     }
+
 }
+
+@media screen and (max-width: $sm) {
+    .hidden-xs {
+        display: none;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+}
+
+.page-heading {
+    margin: 40px 0;
+    margin-bottom: 40px;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.page-heading__image {
+    width: 100%;
+}
+
+/* Sections */
+
+.main-section {
+    background-color: $light-background;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
 
 /* Title Area */
 
 .title-area {
 
-    padding: 0 20px;
+    padding: 80px 20px;
     box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    margin-top: 50px;
 
     h1 {
         margin: 0;
@@ -120,34 +182,202 @@ a:visited {
         font-size: 14px;
         line-height: 20px;
     }
+
+    img {
+        height: 130px;
+        width: 130px;
+        border-radius: 120px;
+        margin-bottom: 10px;
+    }
+}
+
+.title-area:hover {
+    opacity: 0.6;
 }
 
 /* Nav Bar */
 
 .nav-bar {
     text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background-color: white;
+
     a {
         font-size: 14px;
-        line-height: 20px;
-        margin: 0 10px;
+        line-height: 30px;
+        border-bottom: 1px solid #888;
+        margin: 0;
+        padding: 0 10px;
         text-decoration: none;
         display: inline-block;
+        transition: opacity 0.2s;
+    }
+
+    a:hover {
+        opacity: 0.5;
     }
 }
 
-/* Puzzle Area */
+/* Skills Area */
 
-.puzzle-area__container {
+.skills-area__container {
 
-    box-sizing: border-box;
-    padding: 20px;
+    .skills-area__skill {
+        box-sizing: border-box;
+        padding: 20px;
+
+        img {
+            width: 100%;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            opacity: 0.5;
+        }
+
+        a {
+            background-color: #666;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 20px;
+            transition: transform 0.1s;
+        }
+
+        a:hover {
+            transform: scale(1.1, 1.1);
+        }
+    }
 
     h1 {
         text-align: center;
         margin: 0;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+
+}
+
+/* Big Image Area */
+
+.big-image-area__container {
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+
+    .big-image-area__floater {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 20px;
+        background-color: $dark-background;
+        
+        h1, p, a {
+            color: white;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        a {
+            border: 1px solid white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 20px;
+            transition: opacity 0.1s;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
     }
 }
 
-.puzzle-area {
+.big-image-area__image {
+    width: 160%;
+}
 
+/* Social Links */
+
+.social-links__container {
+    text-align: center;
+    i {
+        font-size: 30px;
+        margin: 0px 5px;
+        transition: opacity 0.2s;
+    }
+    i:hover {
+        opacity: 0.6;
+    }
+}
+
+/* Contact Form */
+
+.contact-form {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: $dark-background;
+    
+    h1, p {
+        color: white;
+        text-align: center;
+    }
+}
+
+.contact-form__box {
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    input[type="text"], textarea {
+        width: 100%;
+    }
+
+    textarea {
+        min-height: 60px;
+        resize: vertical;
+        transition: min-height 0.4s;
+    }
+
+    textarea:focus {
+        min-height: 180px;
+    }
+
+    h4 {
+        color: white;
+        margin: 0;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    input[type="submit"] {
+        border: 1px solid white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 20px;
+        transition: opacity 0.1s;
+        background: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        opacity: 0.6;
+    }
 }

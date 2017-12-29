@@ -8,26 +8,24 @@
     <title>Louise Burfitt</title>
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Hind:300" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <?php wp_head();?>
 </head>
 
 <body>
+
+<div class="nav-bar hidden-xs">
+    <?php wp_nav_menu() ?>
+</div>
     
 <div class="container">
 
-<div class="col-5 col-xs-12 title-area">
+<div class="col-12 title-area">
+    <img class="title-area__img" src="https://i0.wp.com/www.frauleinlouise.com/wp-content/uploads/2015/11/cropped-IMG_2940-2-1.jpg"/>
     <h1>Louise Burfitt</h1>
     <h2>Translator, Editor, Writer, Photographer</h2>
 </div>
 
-<div class="col-7 nav-bar hidden-xs">
-    <nav class="blog-nav">
-        <a class="blog-nav-item active" href="#">Home</a>
-        <a class="blog-nav-item" href="#">New features</a>
-        <a class="blog-nav-item" href="#">Press</a>
-        <a class="blog-nav-item" href="#">New hires</a>
-        <a class="blog-nav-item" href="#">About</a>
-    </nav>
-</div>
+
 
 </div>
