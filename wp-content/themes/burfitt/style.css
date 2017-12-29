@@ -1,0 +1,96 @@
+/*
+Theme Name: Start WordPress
+Author: Tania Rascia
+Description: Bootstrap Blog template converted to WordPress
+Version: 0.0.1
+Tags: bootstrap
+*/
+/* Variables */
+/* Breakpoints */
+/* Presets */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i1.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5801.jpg?resize=1200%2C800"); }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-family: 'Comfortaa', cursive; }
+
+p, a {
+  color: #555;
+  font-family: 'Hind', sans-serif; }
+
+a:visited {
+  color: #555; }
+
+/* Layouts */
+.container {
+  width: 94%;
+  margin: auto;
+  position: relative; }
+  @media (min-width: 768px) {
+    .container {
+      width: 550px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+  .container div {
+    display: inline-block;
+    background-color: white; }
+  .container .col-4 {
+    width: 33%; }
+  .container .col-5 {
+    width: 41%; }
+  .container .col-6 {
+    width: 49%; }
+  .container .col-7 {
+    width: 58%; }
+  .container .col-8 {
+    width: 66%; }
+  .container .col-12 {
+    width: 100%; }
+  .container .align-center {
+    margin: 0 auto;
+    display: block; }
+  @media screen and (max-width: 768px) {
+    .container .hidden-xs {
+      display: none; }
+    .container .col-xs-12 {
+      width: 100%; } }
+
+/* Title Area */
+.title-area {
+  padding: 0 20px;
+  box-sizing: border-box; }
+  .title-area h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 40px; }
+  .title-area h2 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px; }
+
+/* Nav Bar */
+.nav-bar {
+  text-align: center; }
+  .nav-bar a {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block; }
+
+/* Puzzle Area */
+.puzzle-area__container {
+  box-sizing: border-box;
+  padding: 20px; }
+  .puzzle-area__container h1 {
+    text-align: center;
+    margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

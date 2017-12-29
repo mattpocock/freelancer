@@ -1,0 +1,35 @@
+/*
+Theme Name: Start WordPress
+Author: Tania Rascia
+Description: Bootstrap Blog template converted to WordPress
+Version: 0.0.1
+Tags: bootstrap
+*/
+/* Resets */
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh; }
+
+/* Variables */
+/* Breakpoints */
+/* Layouts */
+.container {
+  position: relative; }
+  .container div {
+    display: inline-block; }
+  .container .col-4 {
+    width: 33%; }
+  .container .col-8 {
+    width: 66%; }
+  .container .align-center {
+    margin: 0 auto;
+    display: block; }
+  @media screen and (max-width: 768px) {
+    .container .hidden-xs {
+      display: none; } }
+
+/*# sourceMappingURL=css.map */
