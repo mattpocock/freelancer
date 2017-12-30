@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "mpocock@me.com";
+    $email_to = "louise.burfitt@gmail.com";
     $email_subject = "Contact from louiseburfitt.com";
  
     function died($error) {
@@ -62,15 +62,6 @@ if(isset($_POST['email'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-?>
- 
-<!-- include your own success html here -->
- 
-<?php header('Location: /contact-sent');
-exit;
-?>
-<?php
- 
-}
-?>
+@mail($email_to, $email_subject, $email_message, $headers);
+
+header('Location: /contact-sent');exit;}?>
