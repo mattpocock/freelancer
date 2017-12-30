@@ -382,11 +382,6 @@ hr {
     textarea {
         min-height: 60px;
         resize: vertical;
-        transition: min-height 0.4s;
-    }
-
-    textarea:focus {
-        min-height: 180px;
     }
 
     h4 {

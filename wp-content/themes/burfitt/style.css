@@ -249,10 +249,7 @@ hr {
     width: 100%; }
   .contact-form__box textarea {
     min-height: 60px;
-    resize: vertical;
-    transition: min-height 0.4s; }
-  .contact-form__box textarea:focus {
-    min-height: 180px; }
+    resize: vertical; }
   .contact-form__box h4 {
     color: white;
     margin: 0;
