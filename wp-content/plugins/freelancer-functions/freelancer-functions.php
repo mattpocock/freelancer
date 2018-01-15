@@ -14,6 +14,10 @@ function page_top_image( $atts ) {
         'title' => ''
     ), $atts);
 
+    if ($a['src'] === '') {
+        return '<h2 class="page-heading">'.$a['title'].'</h2>';
+    }
+
     return '<h2 class="page-heading">'.$a['title'].'</h2>'
             .'<img class="page-heading__image" src="'.$a["src"].'"/>';
 
