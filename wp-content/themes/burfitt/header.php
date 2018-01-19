@@ -26,10 +26,10 @@
 
 <div class="col-12 title-area">
     <a href="/">
-        <img class="title-area__img" src="https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAAy_AAAAJDgzM2JjNmQ0LTExZjMtNDdmOS1hOTgyLWMzZmVlNWYyNTVkNQ.jpg"/>
+        <img class="title-area__img" src="<?php echo get_theme_mod("header_image", "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAAy_AAAAJDgzM2JjNmQ0LTExZjMtNDdmOS1hOTgyLWMzZmVlNWYyNTVkNQ.jpg");?>"/>
     </a>
-    <h1>Louise Burfitt</h1>
-    <h2>Translator, Editor, Writer, Photographer</h2>
+    <h1><?php echo get_theme_mod("header_title", "Louise Burfitt");?></h1>
+    <h2><?php echo get_theme_mod("header_desc", "");?></h2>
 </div>
 
 

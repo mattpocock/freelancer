@@ -14,6 +14,65 @@ add_action( 'init', 'register_my_menus' );
 
 function burfitt_customize_register($wp_customize) 
 {
+
+  // Header Section
+
+  $wp_customize->add_section("header", array(
+		"title" => __("Top Header Bar", "header_bar"),
+		"priority" => 29,
+  ));
+
+  $wp_customize->add_setting("header_image", array(
+		'default' => '',
+		"transport" => "refresh",
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		"header_image",
+		array(
+			"label" => __("Top Header: Image", "header_image"),
+			"section" => "header",
+			"settings" => "header_image",
+			"type" => "text",
+		)
+  ));
+
+  // Title
+  $wp_customize->add_setting("header_title", array(
+		'default' => "Louise Burfitt",
+		"transport" => "refresh",
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		"header_title",
+		array(
+			"label" => __("Top Header: Title", "header_title"),
+			"section" => "header",
+			"settings" => "header_title",
+			"type" => "text",
+		)
+  ));
+
+  // Desc
+  $wp_customize->add_setting("header_desc", array(
+		'default' => "",
+		"transport" => "refresh",
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		"header_desc",
+		array(
+			"label" => __("Top Header: Subtitle", "header_desc"),
+			"section" => "header",
+			"settings" => "header_desc",
+			"type" => "text",
+		)
+  ));
+
+  // Skills Section
 	$wp_customize->add_section("skills", array(
 		"title" => __("Skills Area", "skills_sections"),
 		"priority" => 30,
@@ -21,7 +80,7 @@ function burfitt_customize_register($wp_customize)
 
   // Translation Section
   $wp_customize->add_setting("first_skill_text", array(
-		"default" => "",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -38,7 +97,7 @@ function burfitt_customize_register($wp_customize)
 
   // Image
   $wp_customize->add_setting("first_skill_image", array(
-		"default" => "https://i1.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5852.jpg?resize=1200%2C800",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -55,7 +114,7 @@ function burfitt_customize_register($wp_customize)
 
   // Link
   $wp_customize->add_setting("first_skill_link", array(
-		"default" => "#",
+		'default' => "#",
 		"transport" => "refresh",
   ));
 
@@ -74,7 +133,7 @@ function burfitt_customize_register($wp_customize)
 
   // Text
   $wp_customize->add_setting("second_skill_text", array(
-		"default" => "",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -91,7 +150,7 @@ function burfitt_customize_register($wp_customize)
 
   // Image
   $wp_customize->add_setting("second_skill_image", array(
-		"default" => "https://i2.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5853.jpg?resize=1200%2C800",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -109,7 +168,7 @@ function burfitt_customize_register($wp_customize)
   // Link
 
   $wp_customize->add_setting("second_skill_link", array(
-		"default" => "#",
+		'default' => "#",
 		"transport" => "refresh",
   ));
 
@@ -128,7 +187,7 @@ function burfitt_customize_register($wp_customize)
 
   // Text
   $wp_customize->add_setting("third_skill_text", array(
-		"default" => "",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -145,7 +204,7 @@ function burfitt_customize_register($wp_customize)
 
   // Image
   $wp_customize->add_setting("third_skill_image", array(
-		"default" => "https://i2.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5864.jpg?resize=1200%2C800",
+		'default' => "",
 		"transport" => "refresh",
   ));
 
@@ -162,7 +221,7 @@ function burfitt_customize_register($wp_customize)
 
   // Link
   $wp_customize->add_setting("third_skill_link", array(
-		"default" => "#",
+		'default' => "#",
 		"transport" => "refresh",
   ));
 
@@ -185,7 +244,7 @@ function burfitt_customize_register($wp_customize)
   ));
 
   $wp_customize->add_setting("big-image-title", array(
-    "default" => "",
+    'default' => "",
     "transport" => "refresh",
   ));
 
@@ -201,7 +260,7 @@ function burfitt_customize_register($wp_customize)
   ));
 
   $wp_customize->add_setting("big-image-text", array(
-    "default" => "",
+    'default' => "",
     "transport" => "refresh",
   ));
 
@@ -217,7 +276,7 @@ function burfitt_customize_register($wp_customize)
   ));
 
   $wp_customize->add_setting("big-image-a-href", array(
-    "default" => "#",
+    'default' => "#",
     "transport" => "refresh",
   ));
 
@@ -233,7 +292,7 @@ function burfitt_customize_register($wp_customize)
   ));
 
   $wp_customize->add_setting("big-image-link", array(
-    "default" => "https://i1.wp.com/www.frauleinlouise.com/wp-content/uploads/2017/12/IMG_5852.jpg?resize=1200%2C800",
+    'default' => "",
     "transport" => "refresh",
   ));
 
